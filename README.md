@@ -1,5 +1,20 @@
 # REST API dla bazy książek
 
+Konfiguracja bazy danych:
+
+Po zainstalowaniu bazy danych należy podmienić konfigurację w pliku index.js (od linijki 115):
+
+```
+const dbConnData = {
+    host: process.env.PGHOST || '127.0.0.1',
+    port: process.env.PGPORT || 5432,
+    database: process.env.PGDATABASE || 'postgres',
+    user: process.env.PGUSER || 'postgres',
+    password: process.env.PGPASSWORD || 'tajne'
+};
+```
+
+
 Dostępne endpointy:
 
 `POST /api/book` - tworzy książkę o przesłanych w body wartościach.
