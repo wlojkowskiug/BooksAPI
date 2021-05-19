@@ -114,7 +114,7 @@ app.put('/api/book/:id', async (req, res) => {
 require('dotenv').config();
 const dbConnData = {
     host: process.env.PGHOST || '127.0.0.1',
-    port: process.env.PGPORT || 5433,
+    port: process.env.PGPORT || 5432,
     database: process.env.PGDATABASE || 'postgres',
     user: process.env.PGUSER || 'postgres',
     password: process.env.PGPASSWORD || 'tajne'
